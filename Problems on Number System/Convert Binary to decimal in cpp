@@ -1,0 +1,29 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+void Binarytodecimal(string s){
+    
+    int n=s.size();
+    int base=1;
+    int ans=0;
+    for(int i=n-1;i>=0;--i){
+      if(s[i]=='1'){
+        ans=ans+base;
+      }
+      base=base*2;
+    }
+    cout<<ans;
+}
+int main()
+{
+  #ifndef ONLINE_JUDGE
+      freopen("input.txt","r",stdin);
+      freopen("output.txt","w",stdout);
+      #endif
+      
+      
+      string s;
+      cin>>s;
+      Binarytodecimal(s);
+
+}
