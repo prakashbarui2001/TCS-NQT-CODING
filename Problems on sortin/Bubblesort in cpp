@@ -1,0 +1,33 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+void printarry(int arr[],int n){
+    for(int i=0;i<n;++i){
+      cout<<arr[i]<<" ";
+    }
+}
+void Bullbelesort(int arr[],int n){
+
+     for(int i=0;i<n;++i){
+      for(int j=0;j<n-i-1;++j){
+        if(arr[j]>arr[j+1]){
+          swap(arr[j],arr[j+1]);
+        }
+      }
+     }
+
+}
+int main()
+{
+  #ifndef ONLINE_JUDGE
+      freopen("input.txt","r",stdin);
+      freopen("output.txt","w",stdout);
+      #endif
+ 
+     int n=5;
+     int arr[n]={12,5,2,8,10};
+     Bullbelesort(arr,n);
+     printarry(arr,n);     
+   
+
+}
