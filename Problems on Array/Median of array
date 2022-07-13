@@ -1,0 +1,36 @@
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+class Codechef
+{
+    
+    
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int arr[]={2,5,1,7};
+	    int n=arr.length;
+	    int sum=0;
+	    Arrays.sort(arr);
+	    //cout<<"Average is:"<<sum/n<<endl;
+	    //System.out.print(arr);
+	    /*for(int it:arr){
+	        System.out.printf(it+" ");
+	    }*/
+	    if(n%2==0){
+	       // System.out.print(arr[(n/2)+1]);
+	       int x=n/2-1;
+	       int y=n/2;
+	       System.out.println(((double)(arr[x]+arr[y])/2));
+	    }
+	    else
+	    {
+	        System.out.print(arr[n/2]);
+	    }
+		
+		
+	}
+}
