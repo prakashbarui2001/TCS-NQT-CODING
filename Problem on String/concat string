@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main{
+    
+    
+    static void concat(String s,String p){
+        
+        StringBuilder str1=new StringBuilder(s);
+        str1.append(p);
+        System.out.println(str1);
+    }
+    public static void main (String[] args) {
+        
+        String s="takeuForward";
+        String p="Forward";
+        
+        concat(s,p);
+    }
+}
