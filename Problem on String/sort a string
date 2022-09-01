@@ -1,0 +1,21 @@
+import java.util.*;
+ class Codechef{
+    
+    static void repetedword(String s){
+        
+        char charArray[]=s.toCharArray();
+        
+        Arrays.sort(charArray);
+        String p=new String(charArray);
+        System.out.println(p);
+        
+    }
+    
+    
+    public static void main(String []args){
+     String s="abcd aabbcc boy";
+     repetedword(s);
+     
+    }
+    
+}
