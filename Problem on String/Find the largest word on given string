@@ -1,0 +1,39 @@
+import java.util.*;
+ class Codechef{
+    
+    static void repetedword(String s){
+        
+        int n=s.length();
+        int curr=0,maxi=0;
+        String res="";
+        for(int left=0;left<n;){
+            int right=left+1;
+            curr=0;
+            while(right<n && s.charAt(right) != ' '){
+                curr++;
+                right++;
+                
+            }
+            if(curr>maxi){
+                maxi=curr;
+                res="";
+                for(int j=left;j<right;++j){
+                    res=res+s.charAt(j);
+                }
+                
+            }
+            left=right+1;
+        }
+        System.out.println(res);
+        
+        
+    }
+    
+    
+    public static void main(String []args){
+     String s="abcd aabbcc boy";
+     repetedword(s);
+     
+    }
+    
+}
