@@ -1,0 +1,49 @@
+import java.util.*;
+ class Codechef{
+    
+    static void repetedword(String s){
+        int n=s.length();
+        int curr=0;
+        int maxi=0;
+        String res="";
+        for(int left=0;left<n;){
+            int right=left+1;
+            while(right<n && s.charAt(right) != ' '){
+                right++;
+            }
+            int freq[]=new int[26];
+            for(int i=left;i<right;++i){
+                freq[s.charAt(i)-'a']++;
+            }
+            curr=0;
+            for(int i=0;i<26;++i){
+                if(freq[i]>1){
+                    curr++;
+                }
+            }
+            if(curr>maxi){
+                maxi=curr;
+                res="";
+                for(int j=left;j<right;++j){
+                    
+                    res+=s.charAt(j);
+                }
+            }
+            left=right+1;
+        }
+        if(res==""){
+            System.out.printf("-1");
+        }
+        else{
+            System.out.printf(res);
+        }
+    }
+    
+    
+    public static void main(String []args){
+     String s="abcd aabbcc boy";
+     repetedword(s);
+     
+    }
+    
+}
