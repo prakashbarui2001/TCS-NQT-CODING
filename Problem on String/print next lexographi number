@@ -1,0 +1,35 @@
+import java.util.*;
+ class Codechef{
+    
+    static String lexograpic(String s){
+        
+        StringBuffer str=new StringBuffer();
+        int n=s.length();
+        for(int i=0;i<n;++i){
+            int ascii=(int)(s.charAt(i));
+            if(ascii==90){ // if small Z then move to the A
+                str.insert(i,(char)(65));
+            }
+            else if(ascii==122){ // if small z then move to the a 
+                
+                str.insert(i,(char)(97));
+            }
+            else if(ascii>=65 && ascii<90 || ascii>=97 && ascii<122){
+                
+                str.insert(i,(char)(ascii+1)); // if a->b,c->d,e->f
+            }
+        }
+        return str.toString();
+        
+        
+        
+    }
+    
+    
+    public static void main(String []args){
+     String s="ABCDE";
+     System.out.println(lexograpic(s));
+     
+    }
+    
+}
