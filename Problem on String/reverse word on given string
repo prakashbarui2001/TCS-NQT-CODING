@@ -3,6 +3,7 @@ import java.util.*;
     
     // reverse word  om give string
     static void reverseword(String s){
+      s+=" ";  //  take a space after laste word
         int n=s.length();
         Stack<String>st=new Stack<String>();
         
